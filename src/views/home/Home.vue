@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <nav-bar>
+    <nav-bar class="nav-bar">
       <div slot="center">购物街</div>
     </nav-bar>
     <tab-control :title="['流行','新款','精选']"
@@ -140,6 +140,10 @@
     height: 100vh;
     position: relative;
     padding-top: 44px;
+  }
+
+  .nav-bar{
+    color: #ffffff;
   }
 
   .wrapper{

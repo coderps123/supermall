@@ -8,3 +8,16 @@ export function getDetailData(iid) {
     }
   })
 }
+
+export class baseInfo {
+  constructor (columns, itemInfo, shopInfo) {
+    this.columns = columns
+
+    this.price = itemInfo.price
+    this.oldPrice = itemInfo.oldPrice
+    this.discountDesc = itemInfo.discountDesc
+    this.title = itemInfo.title
+
+    this.services = shopInfo.services
+  }
+}
