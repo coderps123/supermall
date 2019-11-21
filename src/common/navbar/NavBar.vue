@@ -20,6 +20,7 @@
 
     position: fixed;
     top: 0;
+    z-index: 9;
 
     height: 44px;
     line-height: 44px;

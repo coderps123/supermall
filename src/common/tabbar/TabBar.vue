@@ -13,7 +13,7 @@
 <style scoped>
   .tab-bar{
     position: fixed;
-    bottom: 0;
+    bottom: -2px;
     right: 0;
     left: 0;
 
