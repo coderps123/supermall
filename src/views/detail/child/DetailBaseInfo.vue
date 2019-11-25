@@ -70,15 +70,17 @@
     margin: 15px 7px;
     padding-bottom: 10px;
     border-bottom: 1px solid #C1c1c1;
+    font-size: 13px;
   }
 
   .bottom{
     display: flex;
     justify-content: space-between;
     margin: 10px 7px 20px;
+    font-size: 13px;
   }
 
   .bottom img{
-    width: 15px;
+    width: 13px;
   }
 </style>

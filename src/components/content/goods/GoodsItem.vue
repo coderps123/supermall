@@ -1,7 +1,7 @@
 <template>
   <div class="goods-item">
-
-    <img :src="item.show.img" alt="" @load="imageLoad" @click="imageClick">
+    <!--  因为数据加载有先后顺序，home的show.img记载完后没有被销毁（因为home使用了keep-alive）  -->
+    <img :src="item.image || item.show.img" alt="" @load="imageLoad" @click="imageClick">
 
     <div class="title">{{item.title}}</div>
     <div class="bottom">
@@ -30,7 +30,9 @@
       },
       imageClick() {
         // this.$bus.$emit('imageClick', this.item.iid)
-        this.$router.push('/detail'+this.item.iid)
+        if (this.$route.path.indexOf('home') > 0) {
+          this.$router.push('/detail'+this.item.iid)
+        }
       }
     }
   }

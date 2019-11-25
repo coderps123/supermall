@@ -39,10 +39,6 @@
 
       // 上拉加载更多
       this.scroll.on('pullingUp', () => {
-        // console.log('--');
-        // setTimeout(() => {
-        //   console.log('++');
-        // }, 1000)
         this.$emit('loadMore')
       })
     },

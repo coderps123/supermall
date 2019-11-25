@@ -51,7 +51,8 @@
         },
         currentType: 'pop',
         isShowBackTop: false,
-        isShowTabControl: false
+        isShowTabControl: false,
+        y: 0
       }
     },
     components: {
@@ -72,8 +73,6 @@
       this.getHomeGoods('pop')
       this.getHomeGoods('new')
       this.getHomeGoods('sell')
-
-
 
     },
     mounted() {
@@ -131,7 +130,19 @@
           // console.log(data);
         })
       }
+    },
+    // 激活
+    activated() {
+      // 此处需要重新刷新
+      this.$refs.scroll.refresh()
+      this.$refs.scroll.scrollTo(0, this.y, 0)
+    },
+    // 解散
+    deactivated() {
+      // 在离开时记录 home scroll滚动的位置
+      this.y = this.$refs.scroll.scroll.y
     }
+
   }
 </script>
 

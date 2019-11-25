@@ -21,3 +21,9 @@ export class baseInfo {
     this.services = shopInfo.services
   }
 }
+
+export function getRecommend() {
+  return request({
+    url: '/api/v1/recommend'
+  })
+}
